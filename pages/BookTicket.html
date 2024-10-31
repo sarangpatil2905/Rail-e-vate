@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rail-e-vate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../Style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo and Search Bar -->
+            <div class="logo-container">
+                <a href="../index.html" class="site-logo">Rail-e-vate</a>
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Discover">
+                </div>
+            </div>
+
+            <!-- Responsive Menu Icon -->
+            <div class="menu-icon" id="menu-icon" onclick="toggleMenu()"><i class='bx bx-menu'></i></div>
+
+            <!-- Navigation Links -->
+            <nav class="navigation" id="navigation">
+                <ul class="navigation-list" id="navigation-list">
+                    <li class="navigation-item"><a href="./DashBoard" class="navigation-link">
+                            <i class='bx bx-window-open'></i> Dashboard</a></li>
+                    <li class="navigation-item"><a href="./BookTicket.html" class="navigation-link">
+                            <i class='bx bx-bookmark'></i> Book Ticket</a></li>
+                    <li class="navigation-item"><a href="./checkBookings.html" class="navigation-link">
+                            <i class='bx bx-check-circle'></i> My Bookings</a></li>
+                    <li class="navigation-item"><a href="./manageBookings.html" class="navigation-link">
+                            <i class='bx bx-cog'></i> Manage Bookings</a></li>
+                </ul>
+                <!-- Login Button -->
+                <div class="login-btn">Log in</div>
+            </nav>
+        </div>
+    </header>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
