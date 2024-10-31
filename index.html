@@ -5,81 +5,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rail-e-vate</title>
+
+    <!-- Google Fonts for the project -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
+
+    <!-- Boxicons and Material Symbols for icons -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="./Style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- External CSS file for custom styles -->
+    <link rel="stylesheet" href="./Style.css">
 </head>
 
 <body>
+    <!-- Header Section -->
     <header class="header">
-        <div class="header-content">
-            <div class="logo-content">
-                <a href="" class="logo">Rail-e-vate</a>
-                <div class="search">
-
+        <div class="header-container">
+            <!-- Logo and Search Bar -->
+            <div class="logo-container">
+                <a href="index.html" class="site-logo">Rail-e-vate</a>
+                <div class="search-bar">
                     <input type="text" class="search-input" placeholder="Discover">
                 </div>
             </div>
 
-            <div class="menu" id="menu" onclick="togglemenu()"><i class='bx bx-menu'></i></div>
+            <!-- Responsive Menu Icon -->
+            <div class="menu-icon" id="menu-icon" onclick="toggleMenu()"><i class='bx bx-menu'></i></div>
 
-            <nav class="nav" id="nav">
-                <ul class="nav-list" id="nav-list">
-                    <li class="nav-item"><a href="./DashBoard" class="nav-link">
+            <!-- Navigation Links -->
+            <nav class="navigation" id="navigation">
+                <ul class="navigation-list" id="navigation-list">
+                    <li class="navigation-item"><a href="./DashBoard" class="navigation-link">
                             <i class='bx bx-window-open'></i> Dashboard</a></li>
-
-                    <li class="nav-item"><a href="./bookTicket.html" class="nav-link">
+                    <li class="navigation-item"><a href="./pages/BookTicket.html" class="navigation-link">
                             <i class='bx bx-bookmark'></i> Book Ticket</a></li>
-                    <li class="nav-item"><a href="./checkBookings.html" class="nav-link">
+                    <li class="navigation-item"><a href="./checkBookings.html" class="navigation-link">
                             <i class='bx bx-check-circle'></i> My Bookings</a></li>
-                    <li class="nav-item"><a href="./manageBookings.html" class="nav-link">
-                            <i class='bx bx-cog'></i> hiManage Bookings</a></li>
+                    <li class="navigation-item"><a href="./manageBookings.html" class="navigation-link">
+                            <i class='bx bx-cog'></i> Manage Bookings</a></li>
                 </ul>
-                <div class="login">Log in</div>
+                <!-- Login Button -->
+                <div class="login-btn">Log in</div>
             </nav>
-
-
         </div>
     </header>
-    <main>
-        <div class="hero-title">
+
+    <!-- Main Section for Hero Heading and Station Search Form -->
+    <main id="home-section">
+        <div class="hero-heading">
             <h1>BOOK YOUR NEXT TRAIN TICKET</h1>
             <h3>Your swift solution for booking train tickets in Maharashtra and India</h3>
         </div>
 
-
-        <div class="station-search">
-            <input type="text" class="source-input" placeholder="Where are you travelling From?">
+        <!-- Station Search Form -->
+        <div class="station-search-form">
+            <input type="text" class="station-input source-input" placeholder="Where are you travelling From?">
             <div>
-                <input type="text" class="destination-input" placeholder="Where are you going?">
-                <button type="button" class="search-station"><i class='bx bx-search'></i></button>
+                <input type="text" class="station-input destination-input" placeholder="Where are you going?">
+                <button type="button" class="station-search-button"><i class='bx bx-search'></i></button>
             </div>
         </div>
-
     </main>
 
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <div class="signin-Menu">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Sign in</h2>
+    <!-- Login Modal Section -->
+    <div id="login-modal" class="modal">
+        <!-- Modal Overlay for background fade effect -->
+        <div class="modal-overlay"></div>
 
-                <input type="text" placeholder="Username" class="login-input">
-                <input type="password" placeholder="Password" class="login-input">
-                <button type="button" class="login-button">Log In</button>
+        <!-- Modal Container -->
+        <div class="modal-container">
+            <!-- Sign-In Section -->
+            <div class="signin-section" id="signin-section" style="display: flex;">
+                <div>
+                    <h1>Welcome back!</h1>
+                    <span>Seamless train ticket booking, right at your fingertips with RailEvate.</span>
+                </div>
+
+                <div class="form-content">
+                    <div class="input-container">
+                        <!-- Username and Password Fields -->
+                        <input type="text" placeholder="Username" class="form-input signin-username">
+                        <input type="password" placeholder="Password" class="form-input signin-password">
+                        <!-- Link for Password Recovery -->
+                        <a href="/forgot-password" class="forgot-password-link">Forgot Password?</a>
+                    </div>
+                    <div class="button-container">
+                        <!-- Sign In and Sign Up Buttons -->
+                        <button type="button" class="btn signin-btn" id="signin-submit-btn">Sign In</button>
+                        <button type="button" class="btn signup-btn" id="signup-toggle-btn">Sign Up</button>
+                        <div class="separator">
+                            <hr>
+                            <span>or continue with</span>
+                            <hr>
+                        </div>
+                        <!-- Social Sign-In Options -->
+                        <div class="social-signin">
+                            <div><img src="./images/g.png" alt="Google"></div>
+                            <div><img src="./images/w.png" alt="Windows"></div>
+                            <div><img src="./images/f.png" alt="Facebook"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="signin-Title">Welcome to login</div>
+            <!-- Sign-Up Section -->
+            <div class="signup-section" id="signup-section" style="display: none;">
+                <div>
+                    <h1>Join the Journey!</h1>
+                    <span>Join us for hassle-free travel.</span>
+                </div>
+
+                <div class="form-content">
+                    <div class="input-container">
+                        <!-- Email and Password Fields for Sign-Up -->
+                        <input type="email" placeholder="Email" class="form-input signup-email">
+                        <input type="password" placeholder="Password" class="form-input signup-password">
+                        <input type="password" placeholder="Confirm Password"
+                            class="form-input signup-confirm-password">
+                    </div>
+                    <div class="button-container">
+                        <!-- Back and Submit Buttons for Sign-Up -->
+                        <button type="button" class="btn back-btn" id="signin-back-toggle">Back</button>
+                        <button type="button" class="btn signup-submit-btn" id="signup-submit-button">Sign Up</button>
+                        <div class="separator">
+                            <hr>
+                            <span>or continue with</span>
+                            <hr>
+                        </div>
+                        <!-- Social Sign-Up Options -->
+                        <div class="social-signin">
+                            <div><img src="./images/g.png" alt="Google"></div>
+                            <div><img src="./images/w.png" alt="Windows"></div>
+                            <div><img src="./images/f.png" alt="Facebook"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Image Section for Decorative Image and Close Button -->
+            <div class="modal-image-section">
+                <span class="close-btn" onclick=" closeLoginModal() ">&times;</span>
+                <img src="./images/login.png" alt="Login">
+            </div>
         </div>
     </div>
 
-
+    <!-- JavaScript file for interactivity -->
     <script src="script.js"></script>
 </body>
 
