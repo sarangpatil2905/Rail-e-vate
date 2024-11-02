@@ -22,6 +22,7 @@ body {
     width: 100%;
     top: 0;
     box-shadow: 0px 1px 4px rgba(4, 38, 51, 0.066);
+    z-index: 3;
 }
 
 .header-container {
@@ -106,10 +107,9 @@ body {
 }
 
 .navigation>.login-btn {
-    text-align: center;
+
 
     border: 2px solid rgba(51, 61, 154, 0.75);
-    color: rgb(51, 62, 154);
 
     padding: 4px 10PX;
     border-radius: 15px;
@@ -117,9 +117,18 @@ body {
 
 }
 
+.navigation>.login-btn>a {
+    color: rgb(51, 62, 154);
+    text-align: center;
+    text-decoration: none;
+}
+
 .login-btn:hover,
 .login-btn:focus {
-    color: #F0F1F8;
+    a {
+        color: #F0F1F8;
+    }
+
     border: 2px solid rgba(51, 61, 154, 0.5);
     background-color: rgb(51, 62, 154);
 }
@@ -214,7 +223,7 @@ body {
     width: 100%;
     height: 100%;
 
-    display: none;
+    display: flex;
     flex-direction: column;
 
     align-items: center;
@@ -223,8 +232,6 @@ body {
     z-index: 1;
     left: 0;
     top: 0;
-
-
 }
 
 .modal-overlay {
@@ -265,15 +272,15 @@ body {
     padding: 50px;
 }
 
+.signin-section>div>h1,
 .signup-section>div>h1 {
     font-weight: 900;
     font-size: 2.5rem;
+    color: rgba(51, 51, 136, 0.882);
     margin-bottom: 2px;
 }
 
 .signin-section>div>h1 {
-    font-weight: 900;
-    font-size: 2.5rem;
     margin-bottom: 5px;
 }
 
@@ -281,9 +288,8 @@ body {
 .signin-section>div>span {
     font-size: .8rem;
     font-weight: 550;
-    color: #6f6c6c;
+    color: #6e6cac;
 }
-
 
 
 
@@ -417,9 +423,254 @@ body {
     color: #000;
 }
 
+
 /* ---------------------------------------------------------------------------- */
 
+.Booktkt-Section {
+    width: 100%;
+    height: calc(100vh - 60px);
+    /* Subtract the header height (60px) */
+    background-image: url("./images/bg3.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.Ticket-hero>.Ticket-Bar {
+    width: 25%;
+    margin: 2% 0% 4% 0%;
+    border: none;
+    background-color: #C7C9F5;
+    height: 10px;
+}
+
+.Ticket {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    width: 50%;
+    height: 65%;
+    gap: 10px;
+    margin-left: 4%;
+    background-image: url("./images/tckt4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Ticket>.ticket-tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    gap: 20px;
+
+}
+
+.Ticket>.ticket-tabs>.details {
+    margin-top: 20%;
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    font-weight: 800;
+    text-decoration: underline;
+    color: #333E9A;
+    font-style: italic;
+}
+
+.steps-container {
+
+    display: flex;
+    flex-direction: column;
+    background-color: #c7c9f5d3;
+    padding: 25px 10px;
+    border-radius: 10px;
+}
+
+.steps-container .step {
+    border-top: 1px solid #333E9Aba;
+    padding: 10px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.steps-container>.last-step {
+    border-bottom: 1px solid #333E9Aba;
+}
+
+.steps-container .step>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F0EEFF;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #6675D0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.steps-container .step label {
+    padding-left: 10px;
+    font-size: .8rem;
+    color: #333d9ae7;
+}
+
+.steps-container .step button {
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #232e5ac3;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    width: 150px;
+    font-size: .95rem;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.steps-container .step button.active {
+    color: #F0F1F8;
+}
+
+.progress-step.active {
+    background-color: #6675D0;
+    color: whitesmoke;
+}
+
+
+.progress-step {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* -------------- */
+.TicketContent {
+    padding: 10px 50px 0px 35px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.TicketContent>.vertical-line {
+    position: absolute;
+    width: 1px;
+    background-color: #000;
+    height: 68%;
+    top: 43px;
+    left: 48%;
+}
+
+.stepContent {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: #272e6f;
+    gap: 20px;
+    padding: 40PX 0PX;
+}
+
+.stepContent.active {
+    display: flex;
+}
+
+
+.stepContent>button {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+
+.stepContent>button>img {
+    margin-top: -3px;
+    margin-left: -3px;
+    width: 90px;
+    height: 40px;
+}
+
+.stepContent>button>img:hover {
+    opacity: .9;
+}
+
+.input-field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 30px;
+    padding: 2px;
+    border-bottom: 1px solid #555;
+}
+
+.input-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.stepContent>img {
+    align-self: end;
+    width: 71px;
+    height: 40px;
+}
+
+.input-data>label {
+    font-style: italic;
+    padding-left: 10px;
+    color: #555;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.input-data>input,
+.input-data>select {
+    background-color: rgba(255, 255, 255, 0);
+    width: 88%;
+    height: 50px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: .8rem;
+    /* font-style: italic; */
+    color: #555;
+    border: none;
+    outline: none;
+    padding-top: 0px;
+    letter-spacing: 2px;
+}
+
+.input-data>input::after {
+    background: none;
+}
+
+input[type="date"] {
+    border: none;
+    color: #555;
+}
+
+/* Placeholder styling */
+.input-data>select>option[value="- - - - - - - -"] {
+    color: #555;
+}
+
+#step1 {
+    display: flex;
+}
 
 @media (max-width: 815px) {
     .header-container {
@@ -436,6 +687,7 @@ body {
         display: none;
     }
 }
+
 
 @media (max-width:530px) {
     #navigation {
