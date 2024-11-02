@@ -44,13 +44,211 @@
                             <i class='bx bx-cog'></i> Manage Bookings</a></li>
                 </ul>
                 <!-- Login Button -->
-                <div class="login-btn">Log in</div>
+                <div class="login-btn"><a href="../pages/Login.html">Log in</a></div>
             </nav>
         </div>
     </header>
 
+    <main class="Booktkt-Section">
+        <br>
+        <div class="hero-heading">
+            <h1>Unlock Moments that Matter</h1>
+            <h3>Your Ticket to Unforgettable Experiences</h3>
+        </div>
+        <br>
+        <br>
+        <div class="Ticket">
+            <!-- Left part with tabs -->
+            <div class="ticket-tabs">
+                <div class="details">Enter Details</div>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="progress-step active" id="step">
+                            <span class="step-circle">&HorizontalLine;</span>
+                        </div>
+                        <div>
+                            <label for="tab1">Step 1</label>
+                            <button class="tab" onclick="showStep(1)">Passenger Info</button>
+                        </div>
+                    </div>
 
-    <script src="script.js"></script>
+                    <div class="step">
+                        <div class="progress-step " id="step">
+                            <span class="step-circle">&times;</span>
+                        </div>
+                        <div>
+                            <label for="tab2">Step 2</label>
+                            <button class="tab" onclick="showStep(2)">Ticket Details</button>
+                        </div>
+                    </div>
+
+                    <div class="step last-step">
+                        <div class="progress-step " id="step">
+                            <span class="step-circle">&times;</span>
+                        </div>
+                        <div>
+                            <label for="tab3">Step 3</label>
+                            <button class="tab" onclick="submitTicketDetails()">Payment</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right part for step content -->
+            <div class="TicketContent">
+                <div class="vertical-line"></div>
+                <!-- Step 1: Passenger Info -->
+                <div id="step1" class="stepContent">
+                    <div class="input-field">
+                        <div class="Passenger-Name input-data">
+                            <label>Passenger</label>
+                            <input type="text" id="passengerName" placeholder="_ _ _ _ _ _ _ _ ">
+                        </div>
+                        <div class="input-data genderfield">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender">
+                                <option value="_ _ _ _ _ _ _ _ " disabled selected>_ _ _ _ _ _ _ _ </option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="input-data">
+                            <label>Date</label>
+                            <input type="date" id="dob">
+                        </div>
+                        <div class="input-data">
+                            <label for="city">City</label>
+                            <select id="city" name="city">
+                                <option value="" disabled selected>_ _ _ _ _ _ _ _ </option>
+                                <option value="New York">New York</option>
+                                <option value="Los Angeles">Los Angeles</option>
+                                <option value="Chicago">Chicago</option>
+                                <option value="Houston">Houston</option>
+                                <option value="Phoenix">Phoenix</option>
+                                <option value="Philadelphia">Philadelphia</option>
+                                <option value="San Antonio">San Antonio</option>
+                                <option value="San Diego">San Diego</option>
+                                <option value="Dallas">Dallas</option>
+                                <option value="San Jose">San Jose</option>
+                                <!-- Add more cities as needed -->
+                            </select>
+                        </div>
+                        <div class="input-data">
+                            <label>Contact</label>
+                            <input type="tel" id="contact" placeholder="_ _ _ _ _ _ _ _">
+                        </div>
+
+                        <div class="input-data">
+                            <label for="State">State</label>
+                            <select id="state" name="state">
+                                <option value="" disabled selected>_ _ _ _ _ _ _ _ </option>
+                                <option value="New York">New York</option>
+                                <option value="Los Angeles">Los Angeles</option>
+                                <option value="Chicago">Chicago</option>
+                                <option value="Houston">Houston</option>
+                                <option value="Phoenix">Phoenix</option>
+                                <option value="Philadelphia">Philadelphia</option>
+                                <option value="San Antonio">San Antonio</option>
+                                <option value="San Diego">San Diego</option>
+                                <option value="Dallas">Dallas</option>
+                                <option value="San Jose">San Jose</option>
+                                <!-- Add more cities as needed -->
+                            </select>
+                        </div>
+                        <div class="input-data">
+                            <label for="PINcode">PIN-Code</label>
+                            <input type="text" id="PINcode" placeholder="_ _ _ _ _ _ _ _">
+                        </div>
+                        <div class="input-data">
+                            <label for="Country">State</label>
+                            <select id="country" name="country">
+                                <option value="" disabled selected>_ _ _ _ _ _ _ _ </option>
+                                <option value="New York">New York</option>
+                                <option value="Los Angeles">Los Angeles</option>
+                                <option value="Chicago">Chicago</option>
+                                <option value="Houston">Houston</option>
+                                <option value="Phoenix">Phoenix</option>
+                                <option value="Philadelphia">Philadelphia</option>
+                                <option value="San Antonio">San Antonio</option>
+                                <option value="San Diego">San Diego</option>
+                                <option value="Dallas">Dallas</option>
+                                <option value="San Jose">San Jose</option>
+                                <!-- Add more cities as needed -->
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="next" onclick=" showStep(2)"><img src="../images/next.png"
+                            class="next"></button>
+                </div>
+
+                <!-- Step 2: Ticket Details -->
+                <div id="step2" class="stepContent">
+                    <div class="input-field">
+                        <div class="input-data">
+                            <label for="boardingStation">Boarding Station</label>
+                            <select id="boardingStation" name="boardingStation">
+                                <option value="" disabled selected>_ _ _ _ _ _ _ _</option>
+                                <option value="New York">New York</option>
+                                <!-- Add more stations as needed -->
+                            </select>
+                        </div>
+                        <div class="input-data">
+                            <label for="destinationStation">Dest Station</label>
+                            <select id="destinationStation" name="destinationStation">
+                                <option value="" disabled selected>_ _ _ _ _ _ _ _</option>
+                                <option value="New York">New York</option>
+
+                            </select>
+                        </div>
+                        <div class="input-data">
+                            <label for="journeyDate">Journey Date</label>
+                            <input type="date" id="journeyDate">
+                        </div>
+                        <div class="input-data">
+                            <label for="departureTime">Departure Time</label>
+                            <select id="departureTime">
+                                <option value="" disabled selected>_ _ : _ _</option>
+                                <!-- Options will be populated dynamically -->
+                            </select>
+                        </div>
+                        <div class="input-data">
+                            <label for="trainName">Train Name</label>
+                            <select id="trainName" name="trainName">
+                                <option value="" disabled selected>_ _ _ _ _ _ _ _</option>
+                                <option value="New York">New York</option>
+                            </select>
+                        </div>
+                        <div class="input-data">
+                            <label for="coachNumber">Coach Number</label>
+                            <input type="text" id="coachNumber" placeholder="_ _ _ _ _ _ _ _">
+                        </div>
+                        <div class="input-data">
+                            <label for="seatNumber">Seat Number</label>
+                            <input type="text" id="seatNumber" placeholder="_ _ _ _ _ _ _ _">
+                        </div>
+                        <div class="input-data">
+                            <label for="numPassengers">No. of Passengers</label>
+                            <input type="number" id="numPassengers" min="1" placeholder="_ _ _ _ _ _ _ _">
+                        </div>
+                    </div>
+                    <button type="button" class="submit-btn" onclick="submitTicketDetails()"><img
+                            src="../images/submit.png" class="next">
+                    </button>
+
+                </div>
+
+
+                <!-- Step 3: Payment -->
+                <div id="step3" class="stepContent">
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="../script.js"></script>
 </body>
 
 </html>

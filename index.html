@@ -50,7 +50,7 @@
                             <i class='bx bx-cog'></i> Manage Bookings</a></li>
                 </ul>
                 <!-- Login Button -->
-                <div class="login-btn">Log in</div>
+                <div class="login-btn"><a href="../pages/Login.html">Log in</a></div>
             </nav>
         </div>
     </header>
@@ -71,90 +71,6 @@
             </div>
         </div>
     </main>
-
-    <!-- Login Modal Section -->
-    <div id="login-modal" class="modal">
-        <!-- Modal Overlay for background fade effect -->
-        <div class="modal-overlay"></div>
-
-        <!-- Modal Container -->
-        <div class="modal-container">
-            <!-- Sign-In Section -->
-            <div class="signin-section" id="signin-section" style="display: flex;">
-                <div>
-                    <h1>Welcome back!</h1>
-                    <span>Seamless train ticket booking, right at your fingertips with RailEvate.</span>
-                </div>
-
-                <div class="form-content">
-                    <div class="input-container">
-                        <!-- Username and Password Fields -->
-                        <input type="text" placeholder="Username" class="form-input signin-username">
-                        <input type="password" placeholder="Password" class="form-input signin-password">
-                        <!-- Link for Password Recovery -->
-                        <a href="/forgot-password" class="forgot-password-link">Forgot Password?</a>
-                    </div>
-                    <div class="button-container">
-                        <!-- Sign In and Sign Up Buttons -->
-                        <button type="button" class="btn signin-btn" id="signin-submit-btn">Sign In</button>
-                        <button type="button" class="btn signup-btn" id="signup-toggle-btn">Sign Up</button>
-                        <div class="separator">
-                            <hr>
-                            <span>or continue with</span>
-                            <hr>
-                        </div>
-                        <!-- Social Sign-In Options -->
-                        <div class="social-signin">
-                            <div><img src="./images/g.png" alt="Google"></div>
-                            <div><img src="./images/w.png" alt="Windows"></div>
-                            <div><img src="./images/f.png" alt="Facebook"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sign-Up Section -->
-            <div class="signup-section" id="signup-section" style="display: none;">
-                <div>
-                    <h1>Join the Journey!</h1>
-                    <span>Join us for hassle-free travel.</span>
-                </div>
-
-                <div class="form-content">
-                    <div class="input-container">
-                        <!-- Email and Password Fields for Sign-Up -->
-                        <input type="email" placeholder="Email" class="form-input signup-email">
-                        <input type="password" placeholder="Password" class="form-input signup-password">
-                        <input type="password" placeholder="Confirm Password"
-                            class="form-input signup-confirm-password">
-                    </div>
-                    <div class="button-container">
-                        <!-- Back and Submit Buttons for Sign-Up -->
-                        <button type="button" class="btn back-btn" id="signin-back-toggle">Back</button>
-                        <button type="button" class="btn signup-submit-btn" id="signup-submit-button">Sign Up</button>
-                        <div class="separator">
-                            <hr>
-                            <span>or continue with</span>
-                            <hr>
-                        </div>
-                        <!-- Social Sign-Up Options -->
-                        <div class="social-signin">
-                            <div><img src="./images/g.png" alt="Google"></div>
-                            <div><img src="./images/w.png" alt="Windows"></div>
-                            <div><img src="./images/f.png" alt="Facebook"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal Image Section for Decorative Image and Close Button -->
-            <div class="modal-image-section">
-                <span class="close-btn" onclick=" closeLoginModal() ">&times;</span>
-                <img src="./images/login.png" alt="Login">
-            </div>
-        </div>
-    </div>
-
     <!-- JavaScript file for interactivity -->
     <script src="script.js"></script>
 </body>
